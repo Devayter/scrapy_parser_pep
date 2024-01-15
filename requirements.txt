@@ -13,10 +13,11 @@ idna==3.3
 importlib-metadata==4.2.0
 incremental==21.3.0
 iniconfig==1.1.1
+isort==5.13.2
 itemadapter==0.4.0
 itemloaders==1.0.4
 jmespath==1.0.0
-lxml==4.8.0
+lxml==5.1.0
 mccabe==0.6.1
 packaging==21.3
 parsel==1.6.0
@@ -37,6 +38,7 @@ pytest-pythonpath==0.7.4
 queuelib==1.6.2
 Scrapy==2.5.1
 service-identity==21.1.0
+setuptools==69.0.3
 six==1.16.0
 toml==0.10.2
 Twisted==22.2.0
