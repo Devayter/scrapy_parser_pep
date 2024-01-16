@@ -1,18 +1,22 @@
-import os
+from pathlib import Path
 
-from constants import BASE_DIR
+RESULTS = 'results'
 
-os.chdir(BASE_DIR)
+BASE_DIR = Path(__file__).parent
+RESULTS_DIR = BASE_DIR / RESULTS
+
+STATUS_SUMMARY = 'status_summary'
+PEP = 'results/pep_%(time)s.csv'
 
 BOT_NAME = 'pep_parse'
 
-SPIDER_MODULES = ['pep_parse.spiders']
 NEWSPIDER_MODULE = 'pep_parse.spiders'
+SPIDER_MODULES = [NEWSPIDER_MODULE]
 
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    PEP: {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True,
