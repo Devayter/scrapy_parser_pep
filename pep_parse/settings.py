@@ -15,7 +15,7 @@ SPIDER_MODULES = [NEWSPIDER_MODULE]
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    RESULTS + '/pep_%(time)s.csv': {
+    f'{RESULTS}/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True,
