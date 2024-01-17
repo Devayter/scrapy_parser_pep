@@ -6,7 +6,6 @@ BASE_DIR = Path(__file__).parent
 RESULTS_DIR = BASE_DIR / RESULTS
 
 STATUS_SUMMARY = 'status_summary'
-PEP = 'results/pep_%(time)s.csv'
 
 BOT_NAME = 'pep_parse'
 
@@ -16,7 +15,7 @@ SPIDER_MODULES = [NEWSPIDER_MODULE]
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    PEP: {
+    RESULTS + '/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True,
