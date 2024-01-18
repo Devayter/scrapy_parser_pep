@@ -5,10 +5,10 @@ from datetime import datetime as dt
 from .settings import BASE_DIR, RESULTS, RESULTS_DIR, STATUS_SUMMARY
 
 
-RESULTS_DIR.mkdir(exist_ok=True)
-
-
 class PepParsePipeline:
+
+    def __init__(self):
+        RESULTS_DIR.mkdir(exist_ok=True)
 
     def open_spider(self, spider):
         self.statuses = defaultdict(int)
