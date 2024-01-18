@@ -2,7 +2,10 @@ import csv
 from collections import defaultdict
 from datetime import datetime as dt
 
-from .settings import BASE_DIR, RESULTS, STATUS_SUMMARY
+from .settings import BASE_DIR, RESULTS, RESULTS_DIR, STATUS_SUMMARY
+
+
+RESULTS_DIR.mkdir(exist_ok=True)
 
 
 class PepParsePipeline:
